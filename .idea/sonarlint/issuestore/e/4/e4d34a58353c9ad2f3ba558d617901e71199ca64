@@ -1,0 +1,4 @@
+
+G	java:S106"+Replace this use of System.out by a logger.(±“8ÖÆ’ìË1
+u
+java:S2975"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(ÒˆÇÈúÿÿÿÿ8×Æ’ìË1
