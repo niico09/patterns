@@ -10,19 +10,9 @@ public class TreeFactory {
 
     public Tree getTree(Color color, boolean conifer) {
         if (conifer) {
-            Tree tree = coniferTreeMap.get(color);
-            if (tree == null) {
-                tree = new ConiferTree(color);
-                coniferTreeMap.put(color, tree);
-            }
-            return tree;
+            return coniferTreeMap.computeIfAbsent(color, ConiferTree::new);
         } else {
-            Tree tree = decidousTreeMap.get(color);
-            if (tree == null) {
-                tree = new DecidousTree(color);
-                decidousTreeMap.put(color, tree);
-            }
-            return tree;
+            return decidousTreeMap.computeIfAbsent(color, DecidousTree::new);
         }
     }
 }
